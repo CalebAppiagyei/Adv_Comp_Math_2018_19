@@ -1,0 +1,44 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:3/20/19
+//0   
+//1   Period:Period 3
+//7
+//    Lab Title: Lab 25c Java Average
+//
+//***************************************************//
+
+// This Program will ask the user their class average
+// and print a message based on their average
+
+  // Create your scanner class
+import java.util.Scanner
+  
+public class Lab25cJavaAverage 
+{
+  public static void main(String[] args) 
+  {
+    Scanner input = new Scanner ( System.in );
+    
+      // Create an integer
+    int average;
+    System.out.print ( " What is your mid-year average? ") ;
+    average = input.nextInt();
+    
+    if ( average >= 65 ) {
+      Passing(); 
+    }
+    
+    else {
+      Failing(); 
+    }
+  }
+  public static void Passing() {
+    System.out.print ( " \n Good Job =), you are passing " );
+  }
+  public static void Failing() {
+    System.out.print ( " \n Hook up with a smart classmate and STUDY! " );
+  }
+}
