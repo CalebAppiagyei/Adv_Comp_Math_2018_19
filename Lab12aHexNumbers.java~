@@ -1,0 +1,43 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:1/03/19
+//0   
+//1   Period:Period 3
+//7
+//    Lab Title: Lab 12a HexNumbers
+//
+//***************************************************//
+  // Import Scanner
+import java.util.Scanner;
+
+public class Lab12aHexNumbers 
+{
+   public static void main (String[] args)
+   {
+   
+      Scanner input = new Scanner ( System.in );
+   
+     // Declare your Integers
+      int dec;
+      int hex;
+      int pow = 1
+      int x = 0;
+     
+      System.out.print ( " Enter a decimal number between 1 and 50,000: " );
+      dec = input.nextInt();
+      
+      while ( power <= num ) { 
+      power = power * 16;
+      
+      System.out.print ( " Your number in Hexadecimal is " );
+      while ( x < 11 ) {
+               } 
+      
+      
+     
+     
+     
+   }
+}

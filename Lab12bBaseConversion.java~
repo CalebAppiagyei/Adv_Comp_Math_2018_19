@@ -1,0 +1,35 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:1/6/19
+//0   
+//1   Period:Period 3
+//7
+//    Lab Title: Lab 12b BaseConversion
+//
+//***************************************************//
+  // Insert your Scanner
+import java.util.Scanner;
+
+public class Lab12bBaseConversion
+{
+  public static void main ( String[] args )
+  {
+    
+    Scanner input = new Scanner ( System.in );
+    
+      // Create your integers
+    int dec;
+    int base;
+    int pow;
+    
+    System.out.print ( " Enter a decimal number between 1 and 100,000: " );
+    dec = input.nextInt();
+    
+    
+    
+    
+  }
+  
+}
