@@ -1,0 +1,30 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:1/8/19
+//0   
+//1   Period: Period 3
+//7
+//    Lab Title: Lab 17a Guess my number
+//
+//***************************************************//
+import java.util.Random;
+
+public class Lab17aGuessmyNumber
+{
+  public static void main (String[] args) 
+  {
+    
+    Random generator = new Random();
+    
+   int num; 
+   int guess;
+   int attempt;
+   
+   System.out.print ( " Welcome to Guess my Number " );
+   System.out.print ( " /n/nI am thinking of a number between 1 and 1000 " )
+    
+    
+  }
+}

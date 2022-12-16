@@ -1,0 +1,28 @@
+public class Lab14aCelsiustoFarenheit
+{
+   public static void main(String[] args)
+   {
+   double Celsius; 
+   double Farenheit; 
+   Celsius = 0;
+   
+   while ( Celsius < 10 )
+   { 
+   Farenheit = ( Celsius * 9 + 160) / 5;
+   System.out.print("\t" + Celsius+"C" + "\tis\t " +Farenheit+"F" + "\t\t");
+   Celsius = Celsius + 10;
+   
+   Farenheit = ( (Celsius ) * 9 + 160) / 5;
+   System.out.print("\t" + Celsius+"C" + "\tis\t " + Farenheit+"F" + "\t\t");
+   Celsius = Celsius + 10;
+   
+   Farenheit = ((Celsius ) * 9 + 160) / 5;
+   System.out.print("\t" + Celsius+"C" + "\tis\t " + Farenheit+"F" + "\t\t");
+   Celsius = Celsius + 10;
+   
+   Farenheit = (( Celsius ) * 9 + 160) / 5;
+   System.out.println("\t" + Celsius+"C" + "\tis\t " + Farenheit+"F" + "\t\t");
+   Celsius = Celsius - 29; 
+     }
+   }
+}   
