@@ -1,0 +1,96 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:2/22/19
+//0   
+//1   Period:Period 3
+//7
+//    Lab Title: Lab 23b DistinctRandomArray
+//
+//***************************************************//
+
+// This program will create a a random array 
+// with a certain number of DISTINCT values to store in the array.
+// 
+
+  // Create your Scanner
+import java.util.Scanner;
+  // Create your Random
+import java.util.Random;
+
+public class Lab23bSortedDistinctArray
+{
+   public static void main(String[] args)
+   {
+     // Name your Scanner
+      Scanner input = new Scanner ( System.in );
+     // Name your Random
+      Random generator = new Random();
+   
+       // Create your variables 
+      int low, high, diff, remainder, check, many, counter;
+      
+        // Ask the user how many numbers they want generated & ask for the highest and lowest value that can be generated
+      System.out.print ( " How many numbers do your want me to generate? " );
+      many = input.nextInt();
+      System.out.print ( " What is the lowest value (inclusive) from which I can generate number? ");
+      low = input.nextInt();
+      System.out.print ( " What is the highest value (inclusive) from which I can generate number? ");
+      high = input.nextInt();
+      
+        
+      check = (high - low) + 1;
+        // If there are not enough distinct values between the numbers the user picks then print this message
+      while ( many > check ) {
+         System.out.print ( " \n Sorry there are not enough distinct values from " + low + " to " + high + "." );
+         System.out.print ( " \n\n Please enter a value less than or equal to " + check + " to generate: " );
+         many = input.nextInt();
+      }
+      diff = high - low;
+        // Create your Array
+      int[] nums = new int[many];
+        // Generate your numbers
+      if ( many <= check ) {
+         for( int i = 0; i < many; i++ ){
+            nums[i] = generator.nextInt(diff + 1)+low;
+         }
+           // Check for and replace duplicate values
+         for( int i = 0; i < many; i++ ){
+            for ( int j = 0; j < i; j++ ) {
+               while ( nums[i] == nums[j] ) {
+                  nums[i] = generator.nextInt(diff + 1)+low;
+                  j = 0;
+               }
+            }
+         }
+      }
+        // Print the distinct array
+      if ( many <= check ) {
+         System.out.print ( " \n The DISTINCT random array generated is: \n" );
+         for ( int i = 0; i < many; i++ ) {
+            System.out.print (" " + nums[i] + " ");
+         }
+      }
+        // Sort the array
+      if ( many <= check ) {  
+         int temp;  
+         for ( int i = 0; i < many; i++ ){
+            for ( int j = many - 1; i < -1; i--) {
+               if ( nums[i] > nums[j] ){
+                  temp = nums[i];
+                  nums[i] = nums[j];
+                  nums[j] = temp;
+               } 
+            }
+         }
+      }
+      if ( many <= check ) {
+         System.out.print ( " \n The SORTED random array generated is: \n" );
+         for ( int i = 0; i < many; i++ ) {
+            System.out.print (" " + nums[i] + " ");
+         }
+      }
+   
+   }
+}

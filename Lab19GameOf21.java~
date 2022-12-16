@@ -1,0 +1,56 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:1/12/19
+//0   
+//1   Period: Period 3
+//7
+//    Lab Title: Lab 19 GameOf21
+//
+//***************************************************//
+  // Create your Random class
+import java.util.Random
+  // Create your Scanner class
+import java.util.Scanner
+  
+public class Lab19GameOf21
+{
+  public static void main(String[] args)
+  {
+      // Name your Random 
+    Random generator = new Random();
+    
+      // Name your scanner
+    Scanner input = new Scanner ( System.in );
+    
+    int card1;
+    int card2;
+    int total;
+    int ctotal;
+    int comcard1;
+    int comcard2;
+    int choice;
+    
+    System.out.println (" Welcome to Caleb's 21 (BalckJack) Game ");
+      
+    card1 = generator.nextInt(9)+2;
+    card2 = generator.nextInt(9)+2;
+    comcard1 = generator.nextInt(9)+2;
+    comcard2 = generator.nextInt(9)+2;
+    total = card1 + card2;
+    ctotal = comcard1 + comcard2;
+    
+    if ( total > 21 || ctotal > 21 ) {
+      card1 = generator.nextInt(9)+2;
+      card2 = generator.nextInt(9)+2;
+      comcard1 = generator.nextInt(9)+2;
+      comcard2 = generator.nextInt(9)+2;
+      total = card1 + card2;
+      ctotal = comcard1 + comcard2;
+    }
+    
+    System.out.println (" You get a " + card1 + " and a " + card2 + ".");
+    
+  }
+}

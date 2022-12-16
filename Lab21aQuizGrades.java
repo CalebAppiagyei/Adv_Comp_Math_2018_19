@@ -1,0 +1,84 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date:2/8/19
+//0   
+//1   Period:Period 3
+//7
+//    Lab Title: Lab 21a QuizGrades
+//
+//***************************************************//
+
+// This program uses a key and a student's answers to grade a quiz or test.
+
+  // insert your Scanner
+import java.util.Scanner;
+
+public class Lab21aQuizGrades
+{
+   public static void main(String[] args)
+   {
+        // Name your scanner
+      Scanner input = new Scanner ( System.in );
+      
+        // Ask for the amount of questions on the quiz
+      final int QUESTIONS;
+      System.out.print ( " How many questions are in the quiz? ");
+      QUESTIONS = input.nextInt();
+      
+      double correct = 0.0;
+      int correct2 = 0;
+      int answers;
+      int keycounter = 0;
+      double percent;
+      double[] key = new double [QUESTIONS];
+        // Ask for they key for the quiz
+      System.out.print ( " Enter the key for the quiz: ");
+      for ( int i = 0; i < key.length; i++) { 
+         key[i] = input.nextInt();
+      }
+        // Ask for the student answers
+      System.out.print ( " Enter the student answers: ");
+      for ( int j = 0; j < key.length; j++) {
+         answers = input.nextInt();
+         if ( answers == key[keycounter] ) {
+           correct++;
+           correct2++;
+            }
+         keycounter++;
+      }
+        // Print how many answers were correct and the percent correct
+      percent = ( correct / QUESTIONS ) * 100;
+      System.out.print( " The student got " + correct2 + " correct and earned a " + percent + " percent. " );
+        // Ask the user if they would like to grade another quiz
+      char choice;
+      System.out.print ( " \n\n Would you like to grade another quiz (y/n) ? " );
+      choice = input.next().charAt(0);
+        // Reset the "correct" variables
+      correct = 0.0;
+      correct2 = 0;
+        // While the user chosses to grade another quiz run this while loop
+      while ( choice == 'y' ) {
+         if ( choice == 'y' ) {
+            System.out.print ( " Enter the student answers: " );
+            for ( int i = 0; i < key.length; i++ ) {
+               answers = input.nextInt();
+               if ( answers == key[i] ) {
+                  correct++;
+                  correct2++;
+               } 
+            }
+         // Print how many answers were correct and the percent correct
+            percent = ( correct / QUESTIONS ) * 100;
+            System.out.print ( " The student got " + correct2 + " correct and earned a " + percent + " percent. \n" );
+         // Reset the variables back to zero
+            correct = 0.0;
+            correct2 = 0;
+            System.out.print ( " \n\n Would your like to grade another quiz (y/n) ? " );
+            choice = input.next().charAt(0);
+         }
+      }
+   }
+}
+
