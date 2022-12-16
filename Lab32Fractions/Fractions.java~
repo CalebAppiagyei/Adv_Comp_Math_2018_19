@@ -1,0 +1,80 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date: 4/9/19
+//0   
+//1   Period: Period 3
+//7
+//    Lab Title: Lab 32 Fractions(class) 
+//
+//***************************************************//
+
+// This class file will contain methods that reduce a fraction by its GCF,
+// Multiply a fraction by a single integer, change the fraction by division,
+// change the fraction to a String, and put the negative symbol on the numerator
+
+public class Fractions
+{
+   private int numerator;
+   private int denominator;
+   
+     // Create your instructor
+   public Fractions ( int numer, int denom ) {
+      numerator = numer;
+      denominator = denom;
+   }
+     // Create a method to reduce the fraction
+   public Fractions reduce(){
+      int factor = 1, gcf = 0;
+      if ( numerator < 0 && denominator < 0 ) {
+         numerator = numerator * -1;
+         denominator = denominator * -1;
+      }
+      while ( factor < numerator || factor < denominator ){
+         factor++;
+      
+          // Find the GCF          
+         if ( numerator % factor == 0 && denominator % factor == 0) 
+            gcf = factor;
+      }
+      if ( gcf == 0 ) {
+         numerator = numerator;
+         denominator = denominator;
+      }
+      else {
+         numerator = numerator / gcf;
+         denominator = denominator / gcf;
+      }
+      return new Fractions(numerator, denominator);
+   }
+     // Create a method to multiply the fraction
+   public Fractions multiply ( int mult ) {
+      numerator = numerator * mult;
+      return new Fractions (numerator, denominator);
+   }
+     // Create a method to divide the fraction
+   public Fractions divide ( int div ) {
+      denominator = denominator * div;
+      return new Fractions (numerator, denominator);
+   }
+     // Create a method that will turn the fraction into a string
+   public String toString (){
+      return " " + numerator + "/" + denominator;
+   }
+     // Create a method to adjust the fraction
+   public Fractions negativeFraction (){
+      int x = numerator;
+      int y = denominator;
+      
+      if ( y < 0 && x >= 0 ){
+         y = y * -1;
+         x = x * -1;
+      } 
+      if ( y < 0 && x < 0 ) {
+         y = y * -1;
+         x = x * -1;
+      }
+      return new Fractions(x, y); 
+   }
+}

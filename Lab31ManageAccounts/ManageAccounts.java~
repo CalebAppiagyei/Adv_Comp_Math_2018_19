@@ -1,0 +1,30 @@
+//********************479017*************************//
+//
+//4   Name: Caleb Appiagyei
+//7
+//9   Date: 4/6/19
+//0   
+//1   Period: Period 3
+//7
+//    Lab Title: Lab 31 Manage Accounts
+//
+//***************************************************//
+
+//***************************************************
+// ManageAccounts.java
+//
+// Use Account class to create and manage Sally and Joe's 
+// bank accounts
+// **************************************************
+
+public class ManageAccounts
+{
+  public static void main (String[] args)
+  {
+    Account acct1, acct2;
+    // Create account1 for Sally with $1000
+    acct1 = new Account(1000, "Sally", 1111);
+    
+    
+  }
+}
