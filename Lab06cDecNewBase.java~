@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Lab06cDecNewBase
+{
+   public static void main (String[] args)
+   {
+   int dec, base, large; 
+   int x = 0;
+   large = 1;
+   Scanner input = new Scanner ( System.in );
+   System.out.println("Enter a decimal base number");
+   dec = input.nextInt();
+   System.out.println("Enter a base system. (2-9)");
+   base = input.nextInt();
+   int pow;
+   while (large<dec){
+   System.out.print(large +  " ");
+   large = large*base;
+   }
+   System.out.print("\n");
+   while (large>1){
+   System.out.print((large/base) +  " ");
+   large = large/base; 
+   //System.out.print(large);
+   //System.out.print ("your number in your new base system is" + result);     
+   
+   }
+    
+   }
+}
